@@ -5,7 +5,10 @@ using System;
 
 public class ObjectPooler : MonoBehaviour {
 
-	private static volatile ObjectPooler pool;
+	private static volatile ObjectPooler instance;
+
+	public GameObject enemy;
+	public int size;
 
 	private Dictionary<String, ObjectPool> objectPools;
 
@@ -17,13 +20,12 @@ public class ObjectPooler : MonoBehaviour {
 
 	public static ObjectPooler Instance {
 		get {
-			if(pool == null) {
+			if(instance == null) {
 				lock(syncRoot) {
-					if(pool == null)
-						pool = new ObjectPooler();
+					if(instance == null) instance = new ObjectPooler();
 				}
 			}
-			return pool;
+			return instance;
 		}
 	}
 

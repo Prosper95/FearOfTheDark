@@ -1,4 +1,4 @@
-var target : Transform;
+var target : Input.mousePosition;
 var damping = 6.0;
 var smooth = true;
 

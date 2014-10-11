@@ -18,14 +18,14 @@ public class Follow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 v3MoveDirection = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
+		v3MoveDirection = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
 		v3MoveDirection = Player.transform.position - Enemy.transform.position ;
 		transform.position += (v3MoveDirection*fSpeed*Time.deltaTime);
 	}
 
 	void OnTriggerEnter(Collider c) {
 		if (c.gameObject.tag == "Player") {
-			Object.Destroy (this.gameObject);
+			this.gameObject.SetActive (false);
 			Movement.health -= 5;
 		}
 	}

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class ObjectPool : MonoBehaviour {
 
 	private List<GameObject> pool;
-	private GameObject pooledObj;
-	private int initialSize;
-	private int maxSize;
+	public GameObject pooledObj;
+	public int initialSize;
+	public int maxSize;
 
 	/** Construct the ObjectPool to create a List of GameObjects and instantiate the pooledObject passed in each slot */
 	public ObjectPool(GameObject pooledObj, int initialSize, int maxSize) {
@@ -22,6 +22,10 @@ public class ObjectPool : MonoBehaviour {
 			newObj.SetActive(false);
 			pool.Add(newObj);
 		}
+	}
+
+	void start() {
+		new ObjectPool (pooledObj, initialSize, maxSize);
 	}
 
 	/** Get the next GameObject available to be used in the pool
