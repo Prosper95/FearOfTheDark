@@ -19,7 +19,7 @@ public class Liberate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown ("g") && Movement.liberate >= 25) {
+		if (Input.GetKeyDown ("space") && Movement.liberate >= 25) {
 			isLiberating = true;
 			LiberateLight();
 		}

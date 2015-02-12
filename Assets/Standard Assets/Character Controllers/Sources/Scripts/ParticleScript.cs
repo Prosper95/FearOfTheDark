@@ -18,8 +18,7 @@ public class ParticleScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		fire = Input.GetMouseButtonDown (0);
-		if(fire) this.gameObject.GetComponent<ParticleSystem>().enableEmission = true;
-		else this.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
+		//if(fire) 
 		//v3MoveDirection = Input.mousePosition - Player.transform.position; 
 		//transform.position += (v3MoveDirection*fSpeed*Time.deltaTime);
 

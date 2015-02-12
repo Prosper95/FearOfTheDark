@@ -1,4 +1,4 @@
-var target : Input.mousePosition;
+/*var target : Input.mousePosition;
 var damping = 6.0;
 var smooth = true;
 
@@ -15,7 +15,7 @@ function LateUpdate () {
 		else
 		{
 			// Just lookat
-		    transform.LookAt(target);
+		    //transform.LookAt(target);
 		}
 	}
 }
@@ -24,4 +24,4 @@ function Start () {
 	// Make the rigid body not change rotation
    	if (GetComponent.<Rigidbody>())
 		GetComponent.<Rigidbody>().freezeRotation = true;
-}
+}*/
